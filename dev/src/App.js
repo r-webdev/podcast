@@ -24,7 +24,7 @@ class App extends Component {
         {
           this.state.episodes.length > 0 ? 
           this.state.episodes.map(episode => (
-            <blockquote key={episode.guid} class="embedly-card"><h4><a href={episode.url}>{episode.title}</a></h4><p>{episode.summary}</p></blockquote>
+            <iframe src={episode.url.replace('/webdev/', '/webdev/embed/')} height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
           ))
           : ''
         }
