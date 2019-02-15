@@ -12,7 +12,8 @@ class App extends Component {
     }
   }
   componentDidMount = () => {
-    const feed = 'https://cors.io/?https://feed2json.org/convert?url=https%3A%2F%2Fanchor.fm%2Fs%2F912ca60%2Fpodcast%2Frss';
+    // @Fallback feed URL => const feed = 'https://cors.io/?https://feed2json.org/convert?url=https%3A%2F%2Fanchor.fm%2Fs%2F912ca60%2Fpodcast%2Frss';
+    const feed = 'https://cors-anywhere.herokuapp.com/https://feed2json.org/convert?url=https%3A%2F%2Fanchor.fm%2Fs%2F912ca60%2Fpodcast%2Frss';
     fetch(feed)
       .then(res => res.json())
       .then(data => {
