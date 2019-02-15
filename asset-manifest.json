@@ -1,0 +1,13 @@
+{
+  "main.css": "/podcast/static/css/main.aa819c68.chunk.css",
+  "main.js": "/podcast/static/js/main.638e5509.chunk.js",
+  "main.js.map": "/podcast/static/js/main.638e5509.chunk.js.map",
+  "runtime~main.js": "/podcast/static/js/runtime~main.71d09d02.js",
+  "runtime~main.js.map": "/podcast/static/js/runtime~main.71d09d02.js.map",
+  "static/js/2.063ce5bc.chunk.js": "/podcast/static/js/2.063ce5bc.chunk.js",
+  "static/js/2.063ce5bc.chunk.js.map": "/podcast/static/js/2.063ce5bc.chunk.js.map",
+  "index.html": "/podcast/index.html",
+  "precache-manifest.00069a14575813ddb43c9de7bc04fcca.js": "/podcast/precache-manifest.00069a14575813ddb43c9de7bc04fcca.js",
+  "service-worker.js": "/podcast/service-worker.js",
+  "static/css/main.aa819c68.chunk.css.map": "/podcast/static/css/main.aa819c68.chunk.css.map"
+}
