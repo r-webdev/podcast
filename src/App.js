@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Player from './components/Player';
+import Titlebar from './components/Titlebar';
 import './App.scss';
 
 class App extends Component {
@@ -20,17 +22,25 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>r/webdev podcast</h1>
+        <Titlebar />
+        <div id="Output">
         {
           this.state.episodes.length > 0 ? 
           this.state.episodes.map(episode => (
-            <iframe src={episode.url.replace('/webdev/', '/webdev/embed/')} height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+            <Player key={episode.guid} title={episode.title} url={episode.url}/>
           ))
           : ''
         }
+        </div>
       </div>
     );
   }
 }
 
 export default App;
+
+/*
+<div key={episode.guid} className="episode">
+  <iframe title={episode.title} src={episode.url.replace('/webdev/', '/webdev/embed/')} height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+</div>
+*/
