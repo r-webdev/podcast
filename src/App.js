@@ -16,8 +16,7 @@ class App extends Component {
     fetch(feed)
       .then(res => res.json())
       .then(data => {
-          document.getElementById('Spinner').style.display = 'none';
-          this.setState({ 'episodes': data.items })
+        this.setState({ 'episodes': data.items }, () => document.getElementById('Spinner').style.display = 'none');
       })
       .catch(err => console.log(err));
   }
@@ -41,9 +40,3 @@ class App extends Component {
 }
 
 export default App;
-
-/*
-<div key={episode.guid} className="episode">
-  <iframe title={episode.title} src={episode.url.replace('/webdev/', '/webdev/embed/')} height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
-</div>
-*/
