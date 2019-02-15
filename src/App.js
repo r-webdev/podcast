@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Player from './components/Player';
 import Titlebar from './components/Titlebar';
-import './App.scss';
+import Spinner from './components/Spinner';
+import './Base.scss';
 
 class App extends Component {
   constructor() {
@@ -15,13 +16,15 @@ class App extends Component {
     fetch(feed)
       .then(res => res.json())
       .then(data => {
-        this.setState({ 'episodes': data.items })
+          document.getElementById('Spinner').style.display = 'none';
+          this.setState({ 'episodes': data.items })
       })
       .catch(err => console.log(err));
   }
   render() {
     return (
       <div className="App">
+        <Spinner />
         <Titlebar />
         <div id="Output">
         {
